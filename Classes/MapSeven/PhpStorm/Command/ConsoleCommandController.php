@@ -66,7 +66,7 @@ class ConsoleCommandController extends \TYPO3\Flow\Cli\CommandController {
 				if ($commandArgumentDefinition->isRequired()) {
 					$params[] = $commandArgumentDefinition->getDashedName();
 				} else {
-					$params[] = '[' . $commandArgumentDefinition->getDashedName() . ']';
+					$params[] = $commandArgumentDefinition->getDashedName() . '[=null]';
 				}
 			}
 			if (!empty($params)) {
